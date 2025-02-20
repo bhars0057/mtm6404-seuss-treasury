@@ -1,13 +1,12 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import './App.css';
-import Books from './Books';
-import BookDetails from './BookDetails';
-import Quotes from './Quotes';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import './App.css'
+import Books from './Books'
+import BookDetails from './BookDetails'
+import Quotes from './Quotes'
 
 function App() {
   return (
     <Router>
-      {/* Universal Navigation (Fixed on Top) */}
       <header className="app-header">
         <h1>📖 Seussology</h1>
         <nav>
@@ -18,7 +17,6 @@ function App() {
         </nav>
       </header>
 
-      {/* Main Content (Now Has Padding) */}
       <main>
         <Routes>
           <Route path="/" element={<Books />} />
@@ -27,7 +25,7 @@ function App() {
         </Routes>
       </main>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

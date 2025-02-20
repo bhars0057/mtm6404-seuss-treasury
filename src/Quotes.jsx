@@ -1,47 +1,14 @@
-// import { useState, useEffect } from 'react'
-
-// function Quotes() {
-//   const [quotes, setQuotes] = useState([])
-
-//   useEffect(() => {
-//     fetch('https://seussology.info/api/quotes/random/10')
-//       .then((response) => response.json())
-//       .then((data) => setQuotes(data))
-//   }, [])
-
-//   return (
-//     <div>
-//       <h1>Random Quotes</h1>
-//       {/* <ul>
-//         {quotes.map((quote, index) => (
-//           <li key={index}>{quote}</li>
-//         ))}
-//       </ul> */}
-//       <ul>
-//         {quotes.map((quote) => (
-//           <li key={quote.id}>
-//             "{quote.text}" — <strong>{quote.book.title}</strong>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   )
-// }
-
-// export default Quotes
-
-
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 function Quotes() {
-  const [quotes, setQuotes] = useState([]);
+  const [quotes, setQuotes] = useState([])
 
   useEffect(() => {
     fetch('https://seussology.info/api/quotes/random/10')
       .then((response) => response.json())
       .then((data) => setQuotes(data))
-      .catch(error => console.error("Error fetching quotes:", error));
-  }, []);
+      .catch(error => console.error("Error fetching quotes:", error))
+  }, [])
 
   return (
     <div>
@@ -55,8 +22,7 @@ function Quotes() {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
-export default Quotes;
-
+export default Quotes
